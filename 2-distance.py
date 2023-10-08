@@ -15,6 +15,8 @@ while True:
     while echo.value()==1:
         pulse_end = time.ticks_us()
     pulse_duration = pulse_end - pulse_start
+    # 0.0343 mm/s = speed of sound in milliseconds per cm
+    # sound travels 0.343 meters per millisecond or 0.0343cm per milisecond
     distance = pulse_duration * 17165 / 1000000
     distance = round(distance, 0)
     print ('Distance:',"{:.0f}".format(distance),'cm')
