@@ -17,7 +17,7 @@ while True:
     pulse_duration = pulse_end - pulse_start
     # 0.0343 mm/s = speed of sound in milliseconds per cm
     # sound travels 0.343 meters per millisecond or 0.0343cm per milisecond
-    distance = pulse_duration * 17165 / 1000000
+    distance = (timepassed * 0.0343) / 2
     distance = round(distance, 0)
     print ('Distance:',"{:.0f}".format(distance),'cm')
     time.sleep(1)
