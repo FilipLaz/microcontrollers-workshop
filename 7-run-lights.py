@@ -2,6 +2,10 @@ import machine
 import utime
 
 # RUNNING LIGHT
+for i in range(29):                     # from 0 to 28  
+    if i != 23 and i != 24:             # pin 23 and 24 are not GPIO pins
+        machine.Pin(i,machine.Pin.OUT)  # set the pins to output
+
 while True:
     for i in range(29):                      
         if i != 23 and i != 24:      
